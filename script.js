@@ -9,9 +9,9 @@ document.getElementById('loveForm').addEventListener('submit', function (event) 
         return;
     }
 
-    // Generate love percentage with custom probability
+    // Generate love percentage with custom probability logic
     let loveScore;
-    const randomNum = Math.random(); // Get a random number between 0 and 1
+    const randomNum = Math.random();
 
     if (randomNum < 0.20) {
         // 20% chance: 60-70%
@@ -24,19 +24,19 @@ document.getElementById('loveForm').addEventListener('submit', function (event) 
         loveScore = Math.floor(Math.random() * 21) + 80;
     }
 
-    let message = `Love between ${name1} and ${name2} is ${loveScore}%.`;
+    let message = `💖 Love between ${name1} and ${name2} is ${loveScore}%!`;
 
-    // Special cases based on input names
+    // Special cases for specific names
     if (name1.toLowerCase() === 'ayush') {
         if (name2.toLowerCase() === 'mansi') {
-            message = `Love between ${name1} and ${name2} was always 0%!`;
+            message = `❌ Love between ${name1} and ${name2} was always 0%!`;
         } else if (name2.toLowerCase() === 'raina') {
-            message = `Love between ${name1} and ${name2} is 0%, but maybe ${loveScore}%.`;
+            message = `🤔 Love between ${name1} and ${name2} is 0%, but maybe ${loveScore}%.`;
         } else if (name2.toLowerCase() === 'akshita') {
-            message = `C'mon bro, Ayush loves her. But still, the love score is ${loveScore}%.`;
+            message = `💞 C'mon bro, Ayush loves her. The love score is ${loveScore}%.`;
         }
     } else if (name1.toLowerCase() === 'nikhil') {
-        message = `Hello Nikhil! Love with ${name2} is ${loveScore}%.`;
+        message = `👋 Hello Nikhil! Love with ${name2} is ${loveScore}%.`;
     }
 
     // Display the result
